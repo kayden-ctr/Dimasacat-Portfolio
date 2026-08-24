@@ -48,7 +48,7 @@ export default function About() {
               {' '}&amp; Developer
             </h3>
             <p className="text-gray-400 leading-relaxed mb-4 text-justify">
-              Hello! I'm Dimasacat, a passionate and driven information technology student with a strong
+              Hello! I'm Jeremy Dimasacat, a passionate and driven information technology student with a strong
               foundation in software development and a love for turning complex problems into
               elegant, user-friendly solutions.
             </p>

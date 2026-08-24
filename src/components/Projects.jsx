@@ -15,6 +15,7 @@ const projects = [
     tags: ['React', 'Vite', 'Tailwind CSS'],
     category: 'Frontend',
     type: 'Personal',
+    image: '/Figurines.png',
     github: 'https://github.com/kayden-ctr',
     live: 'https://example.com',
     gradient: 'from-blue-600 to-cyan-500',
@@ -27,6 +28,7 @@ const projects = [
     tags: ['PHP', 'CSS', 'JavaScript'],
     category: 'Web App',
     type: 'Academic',
+    image: '/Bakery.png',
     github: 'https://github.com/kayden-ctr',
     live: 'https://example.com',
     gradient: 'from-purple-600 to-pink-500',
@@ -39,6 +41,7 @@ const projects = [
     tags: ['React', 'Tailwind CSS', 'Firebase'],
     category: 'Web App',
     type: 'Academic',
+    image: '/Yakap.png',
     github: 'https://github.com/kayden-ctr',
     live: null,
     gradient: 'from-green-600 to-emerald-500',
@@ -51,6 +54,7 @@ const projects = [
     tags: ['Django', 'PostgreSQL', 'Cloudinary', 'Gemini AI'],
     category: 'Full Stack',
     type: 'Academic',
+    image: '/optinizer.jpg',
     github: 'https://github.com/kayden-ctr',
     live: null,
     gradient: 'from-orange-500 to-yellow-500',
@@ -63,6 +67,7 @@ const projects = [
     tags: ['React', 'Vite', 'Tailwind CSS'],
     category: 'Frontend',
     type: 'Freelance',
+    image: '/Alapa-up.jpg',
     github: 'https://github.com/kayden-ctr',
     live: null,
     gradient: 'from-red-600 to-rose-500',
@@ -75,6 +80,7 @@ const projects = [
     tags: ['Laravel', 'Tailwind CSS', 'Vite'],
     category: 'Website',
     type: 'Academic',
+    image: '/Laravel.jpg',
     github: 'https://github.com/kayden-ctr',
     live: 'https://example.com',
     gradient: 'from-indigo-600 to-violet-500',
@@ -111,16 +117,26 @@ export default function Projects() {
               }`}
             >
               {/* Thumbnail */}
-              <div className={`h-36 rounded-xl bg-gradient-to-br ${project.gradient} mb-4 flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: 'linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(-45deg, #ffffff 25%, transparent 25%)',
-                    backgroundSize: '10px 10px',
-                  }}
-                />
-                <span className="text-white text-4xl font-bold opacity-40 select-none">
-                  {project.title.charAt(0)}
-                </span>
+              <div className={`h-40 rounded-xl mb-4 relative overflow-hidden bg-gradient-to-br ${project.gradient}`}>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 opacity-10"
+                      style={{
+                        backgroundImage: 'linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(-45deg, #ffffff 25%, transparent 25%)',
+                        backgroundSize: '10px 10px',
+                      }}
+                    />
+                    <span className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold opacity-40 select-none">
+                      {project.title.charAt(0)}
+                    </span>
+                  </>
+                )}
                 <div className="absolute top-3 right-3 flex flex-col items-end gap-1">
                   {project.featured && (
                     <span className="text-xs bg-white/20 backdrop-blur-sm text-white px-2 py-0.5 rounded-full font-medium">
