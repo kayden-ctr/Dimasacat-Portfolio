@@ -34,7 +34,7 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight mt-8">
           Hi, I'm{' '}
           <span className="bg-gradient-to-r from-primary-400 to-violet-400 bg-clip-text text-transparent mt-6">
-          JeremyDimasacat
+          Jeremy Dimasacat
           </span>
         </h1>
 
