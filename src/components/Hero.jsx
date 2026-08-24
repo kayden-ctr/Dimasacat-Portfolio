@@ -29,17 +29,17 @@ export default function Hero() {
       />
 
       <div className="text-center px-6 max-w-4xl mx-auto animate-fade-in">
-        <p className="section-subtitle mb-6">Welcome to my portfolio</p>
+        <p className="section-subtitle mb-10">Welcome to my portfolio</p>
 
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight mt-8">
           Hi, I'm{' '}
-          <span className="bg-gradient-to-r from-primary-400 to-violet-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-primary-400 to-violet-400 bg-clip-text text-transparent mt-6">
           JeremyDimasacat
           </span>
         </h1>
 
   
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed mt-10">
           A passionate developer dedicated to building beautiful, functional, and accessible web experiences.
           Let's create something amazing together.
         </p>

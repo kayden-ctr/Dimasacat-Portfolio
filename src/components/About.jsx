@@ -42,7 +42,7 @@ export default function About() {
             />
 
             <h3 className="text-2xl font-bold text-white mb-4">
-              I'm a <span className="text-primary-400">Information Technology Student</span> & Developer
+              I'm a <span className="text-primary-400 text-justify">Information Technology Student</span> & Developer
             </h3>
             <p className="text-gray-400 leading-relaxed mb-4 text-justify">
               Hello! I'm Dimasacat, a passionate and driven information technology student with a strong

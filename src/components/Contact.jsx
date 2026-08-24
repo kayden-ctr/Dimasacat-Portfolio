@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-const EMAILJS_SERVICE_ID  = 'service_czwh1ii'
+const EMAILJS_SERVICE_ID  = 'service_qjyn2mq'
 const EMAILJS_TEMPLATE_ID = 'template_xy1vqtg'
 const EMAILJS_PUBLIC_KEY  = 'A95TFpbltXKDXpwuq'
 
@@ -118,8 +118,8 @@ export default function Contact() {
             </div>
 
             <div className="card bg-gradient-to-br from-primary-900/30 to-violet-900/20 border-primary-800">
-              <p className="text-gray-400 text-sm">⚡ I typically respond within</p>
-              <p className="text-white font-bold text-lg">24 hours</p>
+              <p className="text-gray-400 text-sm mb-3">I typically respond from</p>
+              <p className="text-white font-bold text-lg"> 8:00 AM - 5:00 PM</p>
             </div>
           </div>
 
