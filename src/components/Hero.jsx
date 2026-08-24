@@ -29,7 +29,7 @@ export default function Hero() {
       />
 
       <div className="text-center px-6 max-w-4xl mx-auto animate-fade-in">
-        <p className="section-subtitle mb-10">Welcome to my portfolio</p>
+        <p className="section-subtitle mb-5">Welcome to my portfolio</p>
 
         <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight mt-8">
           Hi, I'm{' '}
