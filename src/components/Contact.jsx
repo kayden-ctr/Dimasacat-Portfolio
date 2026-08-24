@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
-// ── Replace these three values with your own from emailjs.com ──
 const EMAILJS_SERVICE_ID  = 'service_czwh1ii'
 const EMAILJS_TEMPLATE_ID = 'template_xy1vqtg'
-const EMAILJS_PUBLIC_KEY  = 'gnY7HkVY0qBE80co4UxWz'
+const EMAILJS_PUBLIC_KEY  = 'A95TFpbltXKDXpwuq'
 
 const contactInfo = [
   {
