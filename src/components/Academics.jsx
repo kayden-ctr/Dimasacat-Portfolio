@@ -8,7 +8,7 @@ const education = [
     period: '2022 – Present',
     status: 'In Progress',
     description: 'Focusing on software engineering, algorithms, data structures, and web development. Active member of the Computer Science Society.',
-    subjects: ['Data Structures & Algorithms', 'Software Engineering', 'Database Management', 'Operating Systems', 'Web Development'],
+    subjects: ['Data Structures & Algorithms', 'Application Development', 'Database Management', 'Programming', 'Web Development'],
     icon: '🎓',
   },
   {
@@ -17,7 +17,7 @@ const education = [
     period: '2020 – 2022',
     status: 'Graduated',
     description: 'Specialized in Science, Technology, Engineering, and Mathematics. Graduated with honors.',
-    subjects: ['Pre-Calculus', 'Statistics & Probability', 'General Physics', 'Earth Science'],
+    subjects: [''],
     icon: '🏫',
   },
 ]
