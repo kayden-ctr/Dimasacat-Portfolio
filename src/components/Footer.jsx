@@ -2,23 +2,16 @@ import React from 'react'
 
 export default function Footer() {
   const year = new Date().getFullYear()
-
-  const handleScroll = (href) => {
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
-  }
+  const go = href => document.querySelector(href)?.scrollIntoView({ behavior:'smooth' })
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-10 px-6">
+    <footer style={{ backgroundColor:'#141413', borderTop:'1px solid #2e2e2c' }} className="py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <button onClick={() => handleScroll('#home')} className="text-xl font-bold text-white">
-            <span className="text-primary-400"></span>
+          <button onClick={() => go('#home')} className="text-lg font-bold tracking-wide" style={{ color:'#C9C8BF' }}>
             Dimasacat
-            <span className="text-primary-400"></span>
           </button>
-
-          <p className="text-gray-600 text-sm">
+          <p className="text-sm" style={{ color:'#AFACA1' }}>
             &copy; {year} Dimasacat. All rights reserved.
           </p>
         </div>

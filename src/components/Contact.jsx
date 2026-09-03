@@ -78,20 +78,20 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-gray-950">
+    <section id="contact" className="section-padding">
       <div ref={ref} className="max-w-7xl mx-auto opacity-0 translate-y-8 transition-all duration-700">
         <div className="text-center mb-16">
           <p className="section-subtitle">Let's talk</p>
           <h2 className="section-title">Get In Touch</h2>
-          <div className="w-16 h-1 bg-primary-500 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-[#BDBBB2] mx-auto rounded-full" />
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Left panel */}
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h3 className="text-xl font-bold text-white mb-3">Let's work together</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <h3 className="text-xl font-bold text-[#C9C8BF] mb-3">Let's work together</h3>
+              <p className="text-[#AFACA1] leading-relaxed">
                 Whether you have a project in mind, a question, or just want to say hi —
                 my inbox is always open. I'll try my best to get back to you!
               </p>
@@ -104,22 +104,22 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith('http') ? '_blank' : undefined}
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 card hover:shadow-lg hover:shadow-primary-900/20 group"
+                  className="flex items-center gap-4 p-4 card hover:shadow-lg hover:shadow-black/50 group"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-primary-600/20 flex items-center justify-center text-primary-400 flex-shrink-0 group-hover:bg-primary-600 group-hover:text-white transition-all duration-200">
+                  <div className="w-10 h-10 rounded-xl bg-[#2e2e2c] flex items-center justify-center text-[#C9C8BF] flex-shrink-0 group-hover:bg-[#BDBBB2] group-hover:text-[#141413] transition-all duration-200">
                     {icon}
                   </div>
                   <div>
-                    <p className="text-gray-500 text-xs font-medium">{label}</p>
-                    <p className="text-white text-sm font-medium group-hover:text-primary-300 transition-colors">{value}</p>
+                    <p className="text-[#AFACA1] text-xs font-medium">{label}</p>
+                    <p className="text-[#C9C8BF] text-sm font-medium group-hover:text-[#C9C8BF] transition-colors">{value}</p>
                   </div>
                 </a>
               ))}
             </div>
 
-            <div className="card bg-gradient-to-br from-primary-900/30 to-violet-900/20 border-primary-800">
-              <p className="text-gray-400 text-sm mb-3">I typically respond from</p>
-              <p className="text-white font-bold text-lg"> 8:00 AM - 5:00 PM</p>
+            <div className="card bg-gradient-to-br from-[#2e2e2c] to-[#2e2e2c] border-[#2e2e2c]">
+              <p className="text-[#AFACA1] text-sm mb-3">I typically respond from</p>
+              <p className="text-[#C9C8BF] font-bold text-lg"> 8:00 AM - 5:00 PM</p>
             </div>
           </div>
 
@@ -127,8 +127,8 @@ export default function Contact() {
           <form onSubmit={handleSubmit} className="lg:col-span-3 card space-y-5">
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="name" className="block text-gray-400 text-sm font-medium mb-2">
-                  Full Name <span className="text-primary-400">*</span>
+                <label htmlFor="name" className="block text-[#AFACA1] text-sm font-medium mb-2">
+                  Full Name <span className="text-[#C9C8BF]">*</span>
                 </label>
                 <input
                   id="name"
@@ -138,12 +138,12 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                  className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+                  className="w-full bg-[#1f1f1e] border border-[#2e2e2c] text-[#C9C8BF] placeholder-[#2e2e2c] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#AFACA1] focus:ring-1 focus:ring-[#AFACA1]/30 transition-colors"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-400 text-sm font-medium mb-2">
-                  Email Address <span className="text-primary-400">*</span>
+                <label htmlFor="email" className="block text-[#AFACA1] text-sm font-medium mb-2">
+                  Email Address <span className="text-[#C9C8BF]">*</span>
                 </label>
                 <input
                   id="email"
@@ -153,14 +153,14 @@ export default function Contact() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+                  className="w-full bg-[#1f1f1e] border border-[#2e2e2c] text-[#C9C8BF] placeholder-[#2e2e2c] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#AFACA1] focus:ring-1 focus:ring-[#AFACA1]/30 transition-colors"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-gray-400 text-sm font-medium mb-2">
-                Subject <span className="text-primary-400">*</span>
+              <label htmlFor="subject" className="block text-[#AFACA1] text-sm font-medium mb-2">
+                Subject <span className="text-[#C9C8BF]">*</span>
               </label>
               <input
                 id="subject"
@@ -170,13 +170,13 @@ export default function Contact() {
                 value={form.subject}
                 onChange={handleChange}
                 placeholder="What's this about?"
-                className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors"
+                className="w-full bg-[#1f1f1e] border border-[#2e2e2c] text-[#C9C8BF] placeholder-[#2e2e2c] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#AFACA1] focus:ring-1 focus:ring-[#AFACA1]/30 transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-gray-400 text-sm font-medium mb-2">
-                Message <span className="text-primary-400">*</span>
+              <label htmlFor="message" className="block text-[#AFACA1] text-sm font-medium mb-2">
+                Message <span className="text-[#C9C8BF]">*</span>
               </label>
               <textarea
                 id="message"
@@ -186,12 +186,12 @@ export default function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Tell me about your project or question..."
-                className="w-full bg-gray-800 border border-gray-700 text-white placeholder-gray-600 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-colors resize-none"
+                className="w-full bg-[#1f1f1e] border border-[#2e2e2c] text-[#C9C8BF] placeholder-[#2e2e2c] rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#AFACA1] focus:ring-1 focus:ring-[#AFACA1]/30 transition-colors resize-none"
               />
             </div>
 
             {status === 'success' && (
-              <div className="flex items-center gap-2 text-green-400 bg-green-500/10 border border-green-500/20 rounded-xl p-3 text-sm">
+              <div className="flex items-center gap-2 text-[#C9C8BF] bg-[#2e2e2c] border border-[#2e2e2c] rounded-xl p-3 text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -200,7 +200,7 @@ export default function Contact() {
             )}
 
             {status === 'error' && (
-              <div className="flex items-center gap-2 text-red-400 bg-red-500/10 border border-red-500/20 rounded-xl p-3 text-sm">
+              <div className="flex items-center gap-2 text-[#AFACA1] bg-[#2e2e2c] border border-[#2e2e2c] rounded-xl p-3 text-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-9a1 1 0 10-2 0v4a1 1 0 102 0V9zm-1 7a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
                 </svg>
@@ -211,7 +211,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3.5 bg-primary-600 hover:bg-primary-500 disabled:bg-primary-800 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-primary-900/40 hover:shadow-primary-700/40 flex items-center justify-center gap-2"
+              className="w-full py-3.5 bg-[#BDBBB2] hover:bg-[#CFCEC6] disabled:bg-[#2e2e2c] text-[#141413] disabled:cursor-not-allowed font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-black/40 flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>

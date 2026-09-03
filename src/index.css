@@ -3,37 +3,80 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
+
   body {
-    @apply bg-gray-950 text-gray-100 font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #C9C8BF;
+    background-color: #141413;
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Fixed background layer — sits behind all content, never scrolls away */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: #141413;
+    background-image:
+      /* Directional linear: very subtle left-to-right lightening */
+      linear-gradient(
+        110deg,
+        rgba(20, 20, 19, 0) 0%,
+        rgba(201, 200, 191, 0.06) 100%
+      ),
+      /* Spotlight 1 — top-right, warm ivory */
+      radial-gradient(
+        ellipse 65% 55% at 88% 8%,
+        rgba(201, 200, 191, 0.22) 0%,
+        transparent 70%
+      ),
+      /* Spotlight 2 — bottom-left, stone */
+      radial-gradient(
+        ellipse 60% 50% at 8% 92%,
+        rgba(175, 172, 161, 0.18) 0%,
+        transparent 65%
+      ),
+      /* Spotlight 3 — center ambient fill */
+      radial-gradient(
+        ellipse 80% 60% at 48% 52%,
+        rgba(189, 187, 178, 0.10) 0%,
+        transparent 60%
+      );
+  }
+
+  /* 1-px grid texture layer — separate so we can control opacity cleanly */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(201, 200, 191, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 200, 191, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
   }
 }
 
 @layer utilities {
-  .section-padding {
-    @apply py-20 px-6 md:px-12 lg:px-24;
-  }
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-white mb-3;
-  }
-  .section-subtitle {
-    @apply text-primary-400 font-semibold uppercase tracking-widest text-sm mb-4;
-  }
+  .section-padding { @apply py-20 px-6 md:px-12 lg:px-24; }
+  .section-title   { @apply text-3xl md:text-4xl font-bold mb-3; color: #C9C8BF; }
+  .section-subtitle{ @apply font-semibold uppercase tracking-widest text-sm mb-4; color: #AFACA1; }
   .card {
-    @apply bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-primary-500 transition-all duration-300;
+    background-color: rgba(31, 31, 30, 0.75);
+    border: 1px solid #2e2e2c;
+    @apply rounded-2xl p-6 transition-all duration-300;
+    backdrop-filter: blur(2px);
   }
+  .card:hover { border-color: rgba(189, 187, 178, 0.25); }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #030712;
-}
-::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  border-radius: 3px;
-}
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: #141413; }
+::-webkit-scrollbar-thumb { background: #2e2e2c; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #AFACA1; }
