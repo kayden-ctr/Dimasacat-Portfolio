@@ -24,8 +24,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ backgroundColor: 'transparent' }}>
-      <div className="absolute inset-0 -z-10 opacity-[0.04]"
-        style={{ backgroundImage:'linear-gradient(#2e2e2c 1px,transparent 1px),linear-gradient(to right,#2e2e2c 1px,transparent 1px)', backgroundSize:'72px 72px' }} />
+
       <div className="text-center px-6 max-w-4xl mx-auto animate-fade-in">
         <p className="section-subtitle mb-6">Welcome to my portfolio</p>
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight" style={{ color:'#C9C8BF' }}>

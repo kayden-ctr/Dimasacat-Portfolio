@@ -3,63 +3,63 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    /* Background lives on html so fixed children inherit correctly on mobile */
+    background-color: #141413;
+  }
 
   body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #C9C8BF;
-    background-color: #141413;
-    position: relative;
-    isolation: isolate;
+    background-color: transparent;
+    min-height: 100vh;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
   }
 
-  /* Fixed background layer — sits behind all content, never scrolls away */
-  body::before {
+  /* Single background layer on html::before — avoids mobile fixed stacking issues */
+  html::before {
     content: '';
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
+    /* Base + spotlights + subtle grid all in one layer — no blur, no isolation */
     background-color: #141413;
     background-image:
-      /* Directional linear: very subtle left-to-right lightening */
       linear-gradient(
         110deg,
         rgba(20, 20, 19, 0) 0%,
-        rgba(201, 200, 191, 0.06) 100%
+        rgba(201, 200, 191, 0.05) 100%
       ),
-      /* Spotlight 1 — top-right, warm ivory */
       radial-gradient(
         ellipse 65% 55% at 88% 8%,
-        rgba(201, 200, 191, 0.22) 0%,
+        rgba(201, 200, 191, 0.20) 0%,
         transparent 70%
       ),
-      /* Spotlight 2 — bottom-left, stone */
       radial-gradient(
         ellipse 60% 50% at 8% 92%,
-        rgba(175, 172, 161, 0.18) 0%,
+        rgba(175, 172, 161, 0.16) 0%,
         transparent 65%
       ),
-      /* Spotlight 3 — center ambient fill */
       radial-gradient(
         ellipse 80% 60% at 48% 52%,
-        rgba(189, 187, 178, 0.10) 0%,
+        rgba(189, 187, 178, 0.09) 0%,
         transparent 60%
-      );
-  }
-
-  /* 1-px grid texture layer — separate so we can control opacity cleanly */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-image:
-      linear-gradient(rgba(201, 200, 191, 0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(201, 200, 191, 0.045) 1px, transparent 1px);
-    background-size: 64px 64px;
+      ),
+      linear-gradient(rgba(201, 200, 191, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 200, 191, 0.04) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      64px 64px,
+      64px 64px;
+    /* will-change tells the GPU to promote this to its own layer once — no per-scroll repaint */
+    will-change: transform;
   }
 }
 
@@ -68,10 +68,10 @@
   .section-title   { @apply text-3xl md:text-4xl font-bold mb-3; color: #C9C8BF; }
   .section-subtitle{ @apply font-semibold uppercase tracking-widest text-sm mb-4; color: #AFACA1; }
   .card {
-    background-color: rgba(31, 31, 30, 0.75);
+    /* Solid bg — removed backdrop-filter blur (kills mobile GPU performance) */
+    background-color: #1f1f1e;
     border: 1px solid #2e2e2c;
     @apply rounded-2xl p-6 transition-all duration-300;
-    backdrop-filter: blur(2px);
   }
   .card:hover { border-color: rgba(189, 187, 178, 0.25); }
 }
