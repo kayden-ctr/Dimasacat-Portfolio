@@ -22,12 +22,6 @@ const education = [
   },
 ]
 
-const awards = [
-  { title: "Dean's Lister",                period: '2022 – Present', desc: 'Maintained academic excellence each semester' },
-  { title: 'Best Thesis Award',            period: '2024',           desc: 'Awarded for outstanding research project' },
-  { title: 'Coding Competition 1st Place', period: '2023',           desc: 'University-wide programming contest champion' },
-]
-
 export default function Academics() {
   const ref = useScrollReveal()
 
@@ -83,28 +77,8 @@ export default function Academics() {
           </div>
         </div>
 
-        {/* Awards */}
-        <div>
-          <h3 className="text-xl font-bold text-[#C9C8BF] mb-6 text-center">Academic Achievements</h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            {awards.map(({ title, period, desc }) => (
-              <div key={title} className="card flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#2e2e2c] flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#C9C8BF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-[#C9C8BF] font-semibold text-sm">{title}</p>
-                  <p className="text-[#C9C8BF] text-xs mb-1">{period}</p>
-                  <p className="text-[#AFACA1] text-xs">{desc}</p>
-                </div>
-              </div>
-            ))}
+     
           </div>
-        </div>
-
-      </div>
-    </section>
+          </section>
   )
 }
